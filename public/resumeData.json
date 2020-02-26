@@ -125,19 +125,19 @@
       {
         "title": "Product Preview",
         "category": "An E-commerce solution for companies with multiple teams and systems to launchg an accurate and technically sound product.",
-        "image": "canadian-wanderlust.jpg",
+        "image": "product-preview.jpg",
         "url": "https://andyreadpnw.github.io/product-preview-proofing/"
       },
       {
         "title": "Battlecry(offline to refactor for additional gameplay)",
         "category": "A reproduction of the classic hex-based American Civil War board game of the same name.",
-        "image": "canadian-wanderlust.jpg",
+        "image": "battlecry.jpg",
         "url": "https://dev.to/andyreadpnw/hex-based-react-board-game-the-math-1kc0"
       },
       {
         "title": "Reddit Analyzer",
         "category": "Analyze a Reddit user’s complete comment history including sub-reddit history and highest comment.",
-        "image": "canadian-wanderlust.jpg",
+        "image": "reddit-analyze.jpg",
         "url": "https://andyreadpnw.github.io/redditanalyze/"
       }
     ]
