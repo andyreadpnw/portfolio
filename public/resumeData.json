@@ -4,8 +4,8 @@
     "occupation": "Full Stack Web Developer",
     "description": "Establishing a career in software development after 6+ years in the Ecommerce space as a Digital Product Manager and manager of operations.",
     "image": "Picture1.png",
-    "bio": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
+    "bio": "During my career in tech, I have worn a variety of hats. As I continued to work with the web developers at Eddie Bauer, I realized that my invlovement in the web development process sparked my interest the most and decided that software engineering is what I wanted to pursue. Graduated in February 2020 and looking to begin a career in software development! Outside of work I am an avid outdoorsman, mountain guide, skier, woodworker, and dog lover.",
+    "contactmessage": "Interested in connecting with me? Send me a note an I will respond as soon as I can!.",
     "email": "andyreadpnw@gmail.com",
     "phone": "414-748-8814",
     "address": {
@@ -19,7 +19,7 @@
     "social": [
       {
         "name": "twitter",
-        "url": "http://twitter.com",
+        "url": "https://twitter.com/PolishSausage13",
         "className": "fa fa-twitter"
       },
       {
