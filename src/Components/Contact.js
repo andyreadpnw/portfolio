@@ -39,7 +39,8 @@ class Contact extends Component {
     });
   };
 
-  submitMessage = () => {
+  submitMessage = e => {
+    e.preventDefault();
     fetch("https://portfolio-messaging.herokuapp.com/messages", {
       method: "POST",
       headers: {
@@ -54,9 +55,10 @@ class Contact extends Component {
       })
     }).then(resp => {
       if (Math.floor(resp.status / 200) === 1) {
-        console.log("New Message submitted");
+        alert("Your message submitted successfully");
       } else {
         console.log("ERROR", resp);
+        alert("Your message failed to send");
       }
     });
   };
@@ -90,36 +92,33 @@ class Contact extends Component {
         <div className="row">
           <div className="eight columns">
             <form onSubmit={this.submitMessage}>
-              <label>
-                Name:
-                <form>
-                  <input
-                    type="name"
-                    name="name"
-                    value={this.state.name}
-                    onChange={this.updateNameValue}
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.updateEmailValue}
-                  />
-                  <input
-                    type="subject"
-                    name="subject"
-                    value={this.state.subject}
-                    onChange={this.updateSubjectValue}
-                  />
-                  <input
-                    type="content"
-                    name="content"
-                    value={this.state.content}
-                    onChange={this.updateContentValue}
-                  />
-                  <button onClick={this.submitMessage}> Submit </button>
-                </form>
-              </label>
+              <label>Name:</label>
+              <form>
+                <input
+                  type="name"
+                  name="name"
+                  onChange={this.updateNameValue}
+                />
+                <label>Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={this.updateEmailValue}
+                />
+                <label>Subject:</label>
+                <input
+                  type="subject"
+                  name="subject"
+                  onChange={this.updateSubjectValue}
+                />
+                <label>Message:</label>
+                <input
+                  type="content"
+                  name="content"
+                  onChange={this.updateContentValue}
+                />
+                <button onClick={this.submitMessage}> Submit </button>
+              </form>
             </form>
           </div>
 
