@@ -89,6 +89,9 @@
     ],
     "skills": [
       {
+        "name": " "
+      },
+      {
         "name": "ReactJs"
       },
       {
@@ -145,8 +148,8 @@
   "testimonials": {
     "testimonials": [
       {
-        "text": "I would hire this absolute beast",
-        "user": "Simon Whittingham"
+        "text": "The summit is only halfway",
+        "user": "Ed Viesters"
       }
     ]
   }
