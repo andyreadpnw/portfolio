@@ -1,6 +1,66 @@
 import React, { Component } from "react";
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "null",
+      email: "null",
+      subject: "null",
+      content: "null"
+    };
+  }
+
+  updateNameValue = e => {
+    const newValue = e.target.value;
+    this.setState({
+      name: newValue
+    });
+  };
+
+  updateEmailValue = e => {
+    const newValue = e.target.value;
+    this.setState({
+      email: newValue
+    });
+  };
+
+  updateSubjectValue = e => {
+    const newValue = e.target.value;
+    this.setState({
+      subject: newValue
+    });
+  };
+
+  updateContentValue = e => {
+    const newValue = e.target.value;
+    this.setState({
+      content: newValue
+    });
+  };
+
+  submitMessage = () => {
+    fetch("https://portfolio-messaging.herokuapp.com/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        name: this.state.name,
+        email: this.state.email,
+        subject: this.state.subject,
+        message: this.state.message
+      })
+    }).then(resp => {
+      if (Math.floor(resp.status / 200) === 1) {
+        console.log("New Message submitted");
+      } else {
+        console.log("ERROR", resp);
+      }
+    });
+  };
+
   render() {
     if (this.props.data) {
       var name = this.props.data.name;
@@ -29,74 +89,38 @@ class Contact extends Component {
 
         <div className="row">
           <div className="eight columns">
-            <form action="" method="post" id="contactForm" name="contactForm">
-              <fieldset>
-                <div>
-                  <label htmlFor="contactName">
-                    Name <span className="required">*</span>
-                  </label>
+            <form onSubmit={this.submitMessage}>
+              <label>
+                Name:
+                <form>
                   <input
-                    type="text"
-                    defaultValue=""
-                    size="35"
-                    id="contactName"
-                    name="contactName"
-                    onChange={this.handleChange}
+                    type="name"
+                    name="name"
+                    value={this.state.name}
+                    onChange={this.updateNameValue}
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="contactEmail">
-                    Email <span className="required">*</span>
-                  </label>
                   <input
-                    type="text"
-                    defaultValue=""
-                    size="35"
-                    id="contactEmail"
-                    name="contactEmail"
-                    onChange={this.handleChange}
+                    type="email"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.updateEmailValue}
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="contactSubject">Subject</label>
                   <input
-                    type="text"
-                    defaultValue=""
-                    size="35"
-                    id="contactSubject"
-                    name="contactSubject"
-                    onChange={this.handleChange}
+                    type="subject"
+                    name="subject"
+                    value={this.state.subject}
+                    onChange={this.updateSubjectValue}
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="contactMessage">
-                    Message <span className="required">*</span>
-                  </label>
-                  <textarea
-                    cols="50"
-                    rows="15"
-                    id="contactMessage"
-                    name="contactMessage"
-                  ></textarea>
-                </div>
-
-                <div>
-                  <button className="submit">Submit</button>
-                  <span id="image-loader">
-                    <img alt="" src="images/loader.gif" />
-                  </span>
-                </div>
-              </fieldset>
+                  <input
+                    type="content"
+                    name="content"
+                    value={this.state.content}
+                    onChange={this.updateContentValue}
+                  />
+                  <button onClick={this.submitMessage}> Submit </button>
+                </form>
+              </label>
             </form>
-
-            <div id="message-warning"> Error boy</div>
-            <div id="message-success">
-              <i className="fa fa-check"></i>Your message was sent, thank you!
-              <br />
-            </div>
           </div>
 
           <aside className="four columns footer-widgets">
