@@ -451,6 +451,8 @@ ul#nav li.current a {
 .portfolio-item .item-wrap a {
   display: block;
   cursor: pointer;
+  height: 215px;
+  width: 150px;
 }
 
 /* overlay */
@@ -458,8 +460,8 @@ ul#nav li.current a {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 
   opacity: 0;
   -moz-opacity: 0;
