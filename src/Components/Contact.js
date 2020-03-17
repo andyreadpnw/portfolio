@@ -136,18 +136,17 @@ class Contact extends Component {
             </div>
 
             <div className="widget widget_tweets">
-              <h4 className="widget-title">Latest Tweets</h4>
+              <h4 className="widget-title">Latest Blog Post</h4>
               <ul id="twitter">
                 <li>
                   <span>
-                    console.log("Hello Twitter") Looking for some hot takes from
-                    the worlds developers on here.
+                   Technical Interview in Java with 1 week to Prepare
                     <a href="#">
-                      https://twitter.com/PolishSausage13/status/1232752093976334336?s=20
+                    https://dev.to/andyreadpnw/technical-interview-in-a-java-with-1-week-to-prepare-and-no-experience-30f5
                     </a>
                   </span>
                   <b>
-                    <a href="#">25 Days Ago</a>
+                    <a href="#">12 Days Ago</a>
                   </b>
                 </li>
               </ul>
