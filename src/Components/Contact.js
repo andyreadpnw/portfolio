@@ -122,7 +122,7 @@ class Contact extends Component {
             </form>
           </div>
 
-          <aside className="four columns footer-widgets">
+          {/* <aside className="four columns footer-widgets">
             <div className="widget widget_contact">
               <h4>Address and Phone</h4>
               <p className="address">
@@ -133,7 +133,7 @@ class Contact extends Component {
                 <br />
                 <span>{phone}</span>
               </p>
-            </div>
+            </div> */}
 
             <div className="widget widget_tweets">
               <h4 className="widget-title">Latest Blog Post</h4>
@@ -146,7 +146,7 @@ class Contact extends Component {
                     </a>
                   </span>
                   <b>
-                    <a href="#">12 Days Ago</a>
+                    <a href="#">More than 7 Days Ago</a>
                   </b>
                 </li>
               </ul>
