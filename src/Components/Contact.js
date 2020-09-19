@@ -122,18 +122,18 @@ class Contact extends Component {
             </form>
           </div>
 
-          {/* <aside className="four columns footer-widgets">
+          <aside className="four columns footer-widgets">
             <div className="widget widget_contact">
-              <h4>Address and Phone</h4>
-              <p className="address">
+              <h4>Project Links:</h4>
+              {/* <p className="address">
                 {name}
                 <br />
                 {street} <br />
                 {city}, {state} {zip}
                 <br />
                 <span>{phone}</span>
-              </p>
-            </div> */}
+              </p> */}
+            </div>
 
             <div className="widget widget_tweets">
               <h4 className="widget-title">Latest Blog Post</h4>
