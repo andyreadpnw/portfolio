@@ -51,7 +51,7 @@ class Contact extends Component {
         name: this.state.name,
         email: this.state.email,
         subject: this.state.subject,
-        message: this.state.message
+        content: this.state.content
       })
     }).then(resp => {
       if (Math.floor(resp.status / 200) === 1) {
