@@ -105,18 +105,18 @@ class Contact extends Component {
                   name="email"
                   onChange={this.updateEmailValue}
                 />
-                <label>Subject:</label>
+                <label>Message:</label>
                 <input
                   type="subject"
                   name="subject"
                   onChange={this.updateSubjectValue}
                 />
-                <label>Message:</label>
+                {/* <label>Message:</label>
                 <input
                   type="content"
                   name="content"
                   onChange={this.updateContentValue}
-                />
+                /> */}
                 <button onClick={this.submitMessage}> Submit </button>
               </form>
             </form>
